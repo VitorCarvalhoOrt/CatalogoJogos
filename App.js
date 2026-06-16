@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import TelaLista from '../telas/TelaLista'; //ta dando erro
+import TelaRegistro from '../telas/TelaRegistro';
 
-export default function App() {
+const Tab = createBottomTabNavigator();
+
+export default function NavegacaoAbas() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Início" component={TelaLista} />
+      <Tab.Screen name="Configurações" component={TelaRegistro}/>
+    </Tab.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

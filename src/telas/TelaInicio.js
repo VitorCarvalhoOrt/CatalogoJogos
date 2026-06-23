@@ -5,14 +5,11 @@ export default function TelaLista({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.texto}>Tela Inicial</Text>
-
+      <Text>Aplicativo de cadastro de jogos</Text>
       <Button
         title="Ir para Registro"
         onPress={() =>
-          navigation.navigate('Registro', {
-            itemId: 1,
-            nome: 'Juca',
-          })
+          navigation.navigate('Registro')
         }
       />
     </View>
